@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>انتخاب نیک</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<div class="background"></div>
+
+<div class="overlay"></div>
+
+<div class="app">
+
+<section id="homePage" class="page active">
+
+<div class="headerCard">
+
+<h1>🏢 انتخاب نیک</h1>
+
+<p>مدیریت مشتریان</p>
+
+</div>
+
+<div class="searchCard">
+
+<input
+id="searchBox"
+type="text"
+placeholder="نام، شماره یا آدرس مشتری">
+
+<button id="searchBtn">
+
+جستجو
+
+</button>
+
+</div>
+
+<div class="customerCard">
+
+<h2>
+
+اطلاعات مشتری
+
+</h2>
+
+<div id="searchResults" class="searchResults"></div>
+
+<div id="customerInfo">
+
+<p>
+
+هنوز مشتری انتخاب نشده است.
+
+</p>
+
+</div>
+
+<p id="customerMobile" style="display:none"></p>
+
+<div id="customerHistory">
+
+</div>
+
+<div class="actionButtons">
+
+<button id="callBtn">
+
+📞 تماس
+
+</button>
+
+<button id="smsBtn">
+
+💬 پیامک
+
+</button>
+
+</div>
+
+</div></section>
+
+<section id="phonePage" class="page">
+
+<div class="pageCard">
+
+<h2>
+
+📞 تماس
+
+</h2>
+
+<p>
+
+برای تماس با مشتری یا پرسنل، ابتدا آن را انتخاب کنید.
+
+</p>
+
+<button id="callCustomerBtn">
+
+📞 تماس با مشتری
+
+</button>
+
+<hr>
+
+<button id="callStaffBtn">
+
+👷 تماس با پرسنل
+
+</button>
+
+</div>
+
+</section>
+
+<section id="smsPage" class="page">
+
+<div class="pageCard">
+
+<h2>
+
+💬 پیامک
+
+</h2>
+
+<p>
+
+برای ارسال پیامک، ابتدا مشتری را انتخاب کنید.
+
+</p>
+
+<textarea
+id="smsText"
+placeholder="متن پیامک را وارد کنید..."></textarea>
+
+<button id="sendSmsBtn">
+
+💬 ارسال پیامک
+
+</button>
+
+</div>
+
+</section>
+<section id="contactsPage" class="page">
+
+<div class="pageCard">
+
+<h2>
+
+👥 مخاطبین ثابت
+
+</h2>
+
+<div id="contactsList">
+
+<button class="contactBtn" data-name="صمدی" data-phone="09148772168">
+صمدی
+<br>
+09148772168
+</button>
+
+<button class="contactBtn" data-name="روحی" data-phone="09144082106">
+روحی
+<br>
+09144082106
+</button>
+
+<button class="contactBtn" data-name="اصغر کریمی" data-phone="09331217320">
+اصغر کریمی
+<br>
+09331217320
+</button>
+
+<button class="contactBtn" data-name="اکبر کریمی" data-phone="09021063480">
+اکبر کریمی
+<br>
+09021063480
+</button>
+
+<button class="contactBtn" data-name="بایرام اصلانی" data-phone="09308113662">
+بایرام اصلانی
+<br>
+09308113662
+</button>
+
+<button class="contactBtn" data-name="تارویردی اسکندری" data-phone="09394225755">
+تارویردی اسکندری
+<br>
+09394225755
+</button>
+
+<button class="contactBtn" data-name="جانی" data-phone="09147871140">
+جانی
+<br>
+09147871140
+</button>
+
+<button class="contactBtn" data-name="جواد بذری" data-phone="09388212741">
+جواد بذری
+<br>
+09388212741
+</button>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="schedulePage" class="page">
+
+<div class="pageCard">
+
+<h2>
+
+📅 برنامه کاری پرسنل
+
+</h2>
+
+<label>
+
+تاریخ
+
+</label>
+
+<input
+id="workDate"
+type="text"
+value="1405/04/24"
+placeholder="1405/04/24">
+
+<label>
+
+پرسنل
+
+</label>
+
+<select id="staffSelect">
+
+<option>مجید علیزاده</option>
+<option>عدیل علیزاده</option>
+<option>اصغر کریمی</option>
+<option>اکبر کریمی</option>
+<option>بایرام اصلانی</option>
+<option>تارویردی اسکندری</option>
+<option>جانی</option>
+<option>جواد بذری</option>
+<option>زمانی</option>
+<option>گلریزی</option>
+<option>خانم فرهنگ</option>
+
+</select>
+
+<div class="dateButtons">
+
+<button id="prevDayBtn">
+
+◀ روز قبل
+
+</button>
+
+<button id="nextDayBtn">
+
+روز بعد ▶
+
+</button>
+
+</div>
+
+<button id="showScheduleBtn">
+
+نمایش برنامه
+
+</button>
+
+<div id="scheduleResult">
+
+تاریخ و پرسنل را انتخاب کنید و نمایش برنامه را بزنید.
+
+</div>
+
+</div>
+
+</section>
+
+<div class="bottomMenu">
+
+<button onclick="showPage('homePage')">
+
+🏠
+<br>
+خانه
+
+</button>
+
+<button onclick="showPage('phonePage')">
+
+📞
+<br>
+تماس
+
+</button>
+
+<button onclick="showPage('smsPage')">
+
+💬
+<br>
+پیامک
+
+</button>
+
+<button onclick="showPage('contactsPage')">
+
+👥
+<br>
+مخاطبین
+
+</button>
+
+<button onclick="showPage('schedulePage')">
+
+📅
+<br>
+برنامه
+
+</button>
+
+</div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+
+</html>

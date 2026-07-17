@@ -1,0 +1,353 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:tahoma,Arial,sans-serif;
+}
+
+html,body{
+    width:100%;
+    height:100%;
+}
+
+body{
+    direction:rtl;
+    color:#222;
+    background:#f2f4f8;
+    overflow:hidden;
+}
+
+.background{
+    position:fixed;
+    inset:0;
+    background:url("assets/background.png") center center/cover no-repeat;
+    z-index:-2;
+}
+
+.overlay{
+    position:fixed;
+    inset:0;
+    background:rgba(255,255,255,.35);
+    z-index:-1;
+}
+
+.app{
+    width:100%;
+    height:100%;
+    display:flex;
+    flex-direction:column;
+}
+
+.page{
+    display:none;
+    flex:1;
+    overflow-y:auto;
+    padding:18px;
+    padding-bottom:95px;
+}
+
+.page.active{
+    display:block;
+}
+.headerCard,
+.searchCard,
+.customerCard,
+.pageCard{
+
+    background:#fff;
+
+    border-radius:18px;
+
+    padding:16px;
+
+    margin-bottom:16px;
+
+    box-shadow:0 4px 14px rgba(0,0,0,.12);
+
+}
+
+.headerCard{
+
+    text-align:center;
+
+}
+
+.headerCard h1{
+
+    font-size:28px;
+
+    margin-bottom:8px;
+
+}
+
+.headerCard p{
+
+    color:#666;
+
+}
+
+.searchCard{
+
+    display:flex;
+
+    gap:10px;
+
+}
+
+.searchCard input{
+
+    flex:1;
+
+    border:1px solid #ddd;
+
+    border-radius:12px;
+
+    padding:12px;
+
+    font-size:16px;
+
+    outline:none;
+
+}
+
+.searchCard button{
+
+    border:none;
+
+    border-radius:12px;
+
+    padding:12px 18px;
+
+    cursor:pointer;
+
+    background:#1976d2;
+
+    color:#fff;
+
+    font-size:16px;
+
+}.customerCard h2,
+.pageCard h2{
+
+    margin-bottom:14px;
+
+}
+
+.actionButtons{
+
+    display:flex;
+
+    gap:10px;
+
+    margin-top:15px;
+
+}
+
+.actionButtons button{
+
+    flex:1;
+
+    border:none;
+
+    border-radius:12px;
+
+    padding:12px;
+
+    cursor:pointer;
+
+    background:#43a047;
+
+    color:#fff;
+
+    font-size:16px;
+
+}
+
+textarea{
+
+    width:100%;
+
+    min-height:140px;
+
+    resize:vertical;
+
+    border:1px solid #ddd;
+
+    border-radius:12px;
+
+    padding:12px;
+
+    margin:12px 0;
+
+}
+
+input,
+select{
+
+    width:100%;
+
+    border:1px solid #ddd;
+
+    border-radius:12px;
+
+    padding:12px;
+
+    margin:8px 0 14px;
+
+    font-size:15px;
+
+}
+
+.dateButtons{
+
+    display:flex;
+
+    gap:10px;
+
+    margin-bottom:12px;
+
+}
+
+.dateButtons button{
+
+    flex:1;
+
+}
+
+.pageCard button{
+
+    border:none;
+
+    border-radius:12px;
+
+    padding:12px;
+
+    cursor:pointer;
+
+    background:#1976d2;
+
+    color:#fff;
+
+    margin-top:8px;
+
+}.contactBtn{
+
+    width:100%;
+
+    border:none;
+
+    border-radius:12px;
+
+    padding:14px;
+
+    margin-bottom:10px;
+
+    background:#ffffff;
+
+    color:#222;
+
+    box-shadow:0 2px 8px rgba(0,0,0,.10);
+
+    cursor:pointer;
+
+    font-size:15px;
+
+    text-align:center;
+
+}
+
+.bottomMenu{
+
+    position:fixed;
+
+    bottom:0;
+
+    right:0;
+
+    left:0;
+
+    height:72px;
+
+    background:#ffffff;
+
+    display:flex;
+
+    border-top:1px solid #ddd;
+
+    box-shadow:0 -2px 8px rgba(0,0,0,.10);
+
+}
+
+.bottomMenu button{
+
+    flex:1;
+
+    border:none;
+
+    background:#fff;
+
+    cursor:pointer;
+
+    font-size:13px;
+
+    color:#444;
+
+}
+
+.bottomMenu button:hover{
+
+    background:#f2f2f2;
+
+}
+
+#customerInfo{
+
+    line-height:2;
+
+}
+
+#scheduleResult{
+
+    margin-top:16px;
+
+    background:#fff;
+
+    border-radius:12px;
+
+    padding:14px;
+
+    border:1px solid #eee;
+
+}
+
+hr{
+
+    margin:16px 0;
+
+    border:none;
+
+    border-top:1px solid #e5e5e5;
+
+}
+.searchResults{
+    margin-top:12px;
+    margin-bottom:12px;
+}
+
+.searchResultItem{
+    padding:12px;
+    margin-bottom:8px;
+    border:1px solid #ddd;
+    border-radius:12px;
+    background:#f8f8f8;
+    cursor:pointer;
+}
+
+.searchResultItem:hover{
+    background:#ececec;
+}
+
+.searchResultItem b{
+    display:block;
+    margin-bottom:4px;
+}
