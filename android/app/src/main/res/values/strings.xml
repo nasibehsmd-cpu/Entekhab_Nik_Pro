@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">Entekhab Nik Pro</string>
+    <string name="title_activity_main">Entekhab Nik Pro</string>
+    <string name="package_name">com.entekhabnik.pro</string>
+    <string name="custom_url_scheme">com.entekhabnik.pro</string>
+</resources>

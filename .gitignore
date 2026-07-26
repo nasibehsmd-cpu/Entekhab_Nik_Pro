@@ -1,0 +1,7 @@
+node_modules/
+android_manual_backup/
+
+www/script.js.before_remove_schedule
+www/script.js.before_schedule_rebuild
+
+*.bak
